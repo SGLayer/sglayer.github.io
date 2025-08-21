@@ -16,18 +16,34 @@
             text-underline: none;
             text-underline-style: none;
             text-decoration: none;
+            color: white;
+        }
+
+        .header {
+            height: 5em;
+            background-color: rgb(16 16 16);
+            color: #fff;
+            padding: 1em 10em;
+        }
+
+        .body {
+            float: left;
+            width: 100%;
+            padding: 3em 10em;
+            background-color: rgb(32 32 32);
+            color: white;
         }
     </style>
 </head>
 <body>
-<div id="app" style="padding: 1em 15em 15em;">
-    <div style="height:5em;background: white;border-bottom: 1px solid #eee;padding-bottom: 1em;">
+<div id="app" style="padding: 0;">
+    <div class="header">
         <div style="width:5em;float:left;">
             <img style="height:5em" src="images/logo.png"/>
         </div>
         <div style="width:auto;float:left;height: 5em;padding-left: 1em;">
-            <p style="font-weight: lighter;font-size: 2.5em">SGL</p>
-            <p style="font-weight: lighter;">The Simple Library for GPUs</p>
+            <p style="font-weight: normal;font-size: 2.5em">SGL</p>
+            <p style="font-weight: lighter;font-size: 0.8em">The Simple Library for GPUs</p>
         </div>
         <div style="float:right;height: 5em;margin-top:1em;padding-right: 2em;">
             <a href="https://gitcode.com/OpenHarmonyPerfSquad/SGL">
@@ -44,21 +60,32 @@
             </a>
         </div>
     </div>
-    <div style="float:left;padding:1em;width: 100%">
-        <p style="font-weight: lighter;font-size: 1.5em">SGL (Simple GPU Layer), a high-performance GPU compute and
-            graphics framework built on Vulkan. SGL is designed to enable efficient GPU-accelerated computation and
-            rendering across multiple platforms, providing both low-level compute primitives and high-level processing
-            engines for image manipulation, matrix operations, and 3D visualization.</p>
-    </div>
-    <div style="float:left;padding:1em;width: 100%">
-        <div style="width: 30%; float:left;">
-            <img style="width:100%;border: solid 3px #000" src="images/image_process.png"/>
-            <p style="font-weight: lighter;font-size: 1em">Image Processing (e.g.PaletteKnife)</p>
+    <div class="body">
+        <div style="width:100%;float:left;height:25em;">
+            <div style="width:35%;float:left;padding-top: 3em;">
+                <p style="font-weight: lighter;font-size: 1.5em">SGL (Simple GPU Layer), a high-performance GPU compute
+                    and
+                    graphics framework built on Vulkan. SGL is designed to enable efficient GPU-accelerated computation
+                    and
+                    rendering across multiple platforms, providing both low-level compute primitives and high-level
+                    processing
+                    engines for image manipulation, matrix operations, and 3D visualization.</p>
+            </div>
+            <div style="width:10%;float:left;">
+                &nbsp;
+            </div>
+            <div style="width:40%;float:left;">
+                <div style="width: 20em; position: absolute;margin-top:2em;margin-left: 2em;">
+                    <img style="width:100%; border-radius: 1em" src="images/image_process.png"/>
+                    <p style="font-weight: lighter;font-size: 1em">Image Processing (e.g.PaletteKnife)</p>
+                </div>
+                <div style="width: 20em; position: absolute;margin-top:5em;margin-left: 5em;">
+                    <img style="width:100%;border-radius: 1em" src="images/render.png"/>
+                    <p style="font-weight: lighter;font-size: 1em">Renderer(e.g. glTF DamagedHelmet)</p>
+                </div>
+            </div>
         </div>
-        <div style="width: 30%; float:left;">
-            <img style="width:100%;border: solid 3px #000" src="images/render.png"/>
-            <p style="font-weight: lighter;font-size: 1em">Renderer(e.g. glTF DamagedHelmet)</p>
-        </div>
     </div>
+
 </div>
 </body>
